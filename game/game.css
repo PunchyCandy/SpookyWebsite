@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+body{
+    background-color: black;
+    color: orange;
+    text-align: center;
+    
+}
+
+.card {
+    margin: 10px;
+}
+
+=======
 body {
     margin: 0;
 }
@@ -36,9 +49,21 @@ body {
     }
 }
 
+>>>>>>> b1e25801f720fdfc2fd6ac4d9c2a8bb0cf6f01c3
 .card-body {
     display: flex !important;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.card-img-top {
+    width: 250px;
+    height: 250px;
+}
+
+.equipment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
