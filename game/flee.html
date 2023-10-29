@@ -5,35 +5,56 @@
         <link rel = "stylesheet" type = "text/css" href = "game.css"/>
         <script>
             var choice = sessionStorage.getItem("quietResult");
-            var equipment = sessionStorage.getItem("equipment");
+            var eq = sessionStorage.getItem("equipment")
+            var equipment = "";
+            if (eq == 1) {
+                equipment = "emf";
+            }
+            if (eq == 2) {
+                equipment = "camera";
+            }
+            if (eq == 1) {
+                equipment = "goggles";
+            }
+            if (eq == 1) {
+                equipment = "sword";
+            }
         </script>
     </head>
 
     <body>
         <h1>Haunting of the Blackthorn Manor</h1>
         <div class="textbox">
-        <img src = "ghost.jpeg">
-        <p>You ran as fast as you could, but you meet Frankenstein on the way.</p>
+        <img src = "frank.jpg">
+        <p>You ran as fast as you could, but you meet Frankenstein on the way. You are in a deadend, the only way out is by using your equipment.</p>
         </div>
 
         <div class = "equipment">
         <div class="card" style="width: 18rem;">
             <a href="interact.html" onclick="pickQuiet(1)">
-            <img src="ghost.jpeg" class="card-img-top" alt="...">
+            <img id = "image" src="ghost.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Interact!</h5>
+                <h5 class="card-title">Use your equipment!</h5>
             </a>
             </div>
             </div>
-
-          <div class="card" style="width: 18rem;">
-            <a href="flee.html" onclick="pickQuiet(0)">
-            <img src="flee.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Flee!</h5>
-            </a>
-            </div>
-            </div>
+            <script>
+                var src = "";
+                if (eq == 1) {
+                    src = "emf.jpeg";
+                }
+                if (eq == 2) {
+                    src = "camera.webp"
+                }
+                if (eq == 3) {
+                    src = "goggles.jpeg"
+                }
+                if (eq == 4) {
+                    src = "sword.webp"
+                }
+    
+                document.getElementById("image").src = src;
+            </script>
 
     </body>
 </html>
