@@ -47,6 +47,8 @@ body {
     }
 }
 
+/* game.html page. */
+
 .card-body {
     display: flex !important;
     flex-direction: column;
