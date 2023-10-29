@@ -56,6 +56,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: white;
 }
 
 .card-img-top {
