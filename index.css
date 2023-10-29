@@ -50,6 +50,8 @@ body {
         color: white;
         text-align: center;
         font-size: 9em;
+        caret-color: transparent;
+        cursor: default;
     }
 }
 
@@ -66,14 +68,36 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 4em;
+        font-size: 5em;
+        background-color: black;
+        box-shadow: 0 0px 8px 2px rgba(255, 255, 255, 1);
+        caret-color: transparent;
+        cursor: default;
+        
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     .aboutText {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 2.5em;
         border: 1.5px solid white;
-        width: 500px;
-        padding: 15px;
+        width: 480px;
+        height: 280px;
         text-align: center;
+        padding: 10px;
         font-size: 20px;
+        box-shadow: 0 0px 8px 2px rgba(255, 255, 255, 1);
+        caret-color: transparent;
+        cursor: default;
+
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
