@@ -101,3 +101,16 @@ body {
         }
     }
 }
+
+.ghost {
+    width: 100px;
+    animation: moveRight 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-bottom: 30px;
+}
+
+@keyframes moveRight {
+    from {transform: translateX(200px);}
+    to {transform: translateX(1100px);}
+}
