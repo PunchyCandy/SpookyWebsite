@@ -5,6 +5,7 @@
         <link rel = "stylesheet" type = "text/css" href = "game.css"/>
         <script>
             var choice = sessionStorage.getItem("quietResult");
+            console.log(choice)
             var eq = sessionStorage.getItem("equipment")
             var equipment = "";
             if (eq == 1) {
@@ -19,38 +20,47 @@
             if (eq == 1) {
                 equipment = "sword";
             }
-
-            console.log(eq);
         </script>
     </head>
 
     <body>
         <h1>Haunting of the Blackthorn Manor</h1>
-        <img src = "ghost.jpeg">
         <div class="textbox">
-        <p id="text">The room might suddenly become very cold, and a translucent figure materializes in front of the player. You can choose to use your equipment and interact the ghost, or flee in fear.</p>
+        <img src = "frank.jpg">
+        <p id="text"></p>
         </div>
 
-        <script>
-            text = "";
+        <a href="../index.html"><img id="image" src="#"></a>
+            <script>
+                text = "";
             
             if (eq == 1) {
-                text = "You tried to use your EMF Meter against a ghost, however, it doesn't really do anything since it only detects ghost. You died."
+                text = "You tried to use your EMF Meter against Frankenstein, however, it doesn't really do any damage against it. You died."
             }
             if (eq == 2) {
-                text = "You tried to use your infrared thermal camera against a ghost, however, it doesn't really do anything since it only detects ghost. You died."
+                text = "You tried to use your infrared thermal camera against Frankenstein, however, it doesn't really do any damage against it. You died."
             }
             if (eq == 3) {
-                text = "You tried to use your night vision goggles against a ghost, however, it doesn't really do anything since it only helps you see in the night. You died."
+                text = "You tried to use your night vision goggles against Frankenstein, however, it doesn't really do any damage against it. You died."
             }
             if (eq == 4) {
-                text = "You tried to use your sword against a ghost, however, it doesn't really do anything since you can't slash a ghost. You died."
+                text = "You tried to use your sword against Frankenstein, luckily, you can actually slice him in half. In his body, you see a bar of gold. You grab the bar of gold and jump out the window. You win!"
             }
 
             document.getElementById("text").innerHTML = text;
-        </script>
 
-        <a href="../index.html"><img src="dead.jpg"></a>
+            var src = "";
+                if (eq == 4) {
+                    src = "win.jpeg";
+                }
+                else {
+                    src = "dead.jpg"
+                }
+    
+                document.getElementById("image").src = src;
+            </script>
+
+
 
     </body>
 </html>
