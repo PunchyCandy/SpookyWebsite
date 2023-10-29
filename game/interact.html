@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel = "stylesheet" type = "text/css" href = "game.css"/>
+        <script>
+            var choice = sessionStorage.getItem("quietResult");
+            var eq = sessionStorage.getItem("equipment")
+            var equipment = "";
+            if (eq == 1) {
+                equipment = "emf";
+            }
+            if (eq == 2) {
+                equipment = "camera";
+            }
+            if (eq == 1) {
+                equipment = "goggles";
+            }
+            if (eq == 1) {
+                equipment = "sword";
+            }
+
+            console.log(eq);
+        </script>
+    </head>
+
+    <body>
+        <h1>Haunting of the Blackthorn Manor</h1>
+        <img src = "ghost.jpeg">
+        <div class="textbox">
+        <p id="text">The room might suddenly become very cold, and a translucent figure materializes in front of the player. You can choose to use your equipment and interact the ghost, or flee in fear.</p>
+        </div>
+
+        <script>
+            text = "";
+            
+            if (eq == 1) {
+                text = "You tried to use your EMF Meter against a ghost, however, it doesn't really do anything since it only detects ghost. You died."
+            }
+            if (eq == 2) {
+                text = "You tried to use your infrared thermal camera against a ghost, however, it doesn't really do anything since it only detects ghost. You died."
+            }
+            if (eq == 3) {
+                text = "You tried to use your night vision goggles against a ghost, however, it doesn't really do anything since it only helps you see in the night. You died."
+            }
+            if (eq == 4) {
+                text = "You tried to use your sword against a ghost, however, it doesn't really do anything since you can't slash a ghost. You died."
+            }
+
+            document.getElementById("text").innerHTML = text;
+        </script>
+
+        <img src="dead.jpg">
+
+    </body>
+</html>

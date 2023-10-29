@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel = "stylesheet" type = "text/css" href = "game.css"/>
+        <script>
+            var choice = sessionStorage.getItem("quietResult");
+            var equipment = sessionStorage.getItem("equipment");
+        </script>
+    </head>
+
+    <body>
+        <h1>Haunting of the Blackthorn Manor</h1>
+        <div class="textbox">
+        <img src = "ghost.jpeg">
+        <p>The room might suddenly become very cold, and a translucent figure materializes in front of the player. You can choose to use your equipment and interact the ghost, or flee in fear.</p>
+        </div>
+
+        <div class = "equipment">
+        <div class="card" style="width: 18rem;">
+            <a href="interact.html" onclick="pickQuiet(1)">
+            <img src="ghost.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Interact!</h5>
+            </a>
+            </div>
+            </div>
+
+          <div class="card" style="width: 18rem;">
+            <a href="flee.html" onclick="pickQuiet(0)">
+            <img src="flee.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Flee!</h5>
+            </a>
+            </div>
+            </div>
+
+    </body>
+</html>

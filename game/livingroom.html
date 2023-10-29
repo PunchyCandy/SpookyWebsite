@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel = "stylesheet" type = "text/css" href = "game.css"/>
+        <script>
+            var choice = "";
+            function pickQuiet(x) {
+                if (x == 0) {
+                    choice = "ignore";
+                }
+                if (x == 1) {
+                    choice = "quiet"
+                }
+            }
+
+            sessionStorage.setItem("quietResult", choice);
+            eq = sessionStorage.getItem("equipment");
+            console.log(eq);
+        </script>
+    </head>
+
+    <body>
+        <h1>Haunting of the Blackthorn Manor</h1>
+        <div class="textbox">
+        <p>You finally opened the entrance door and entered the living room. As you enter the living room of Blackthorn Manor, an eerie ambiance surrounds them. Moonlight filters through dusty, cracked windows, casting elongated shadows on the worn, faded wallpaper. The room is filled with old, weathered furniture and decaying portraits of people long forgotten. The air feels unusually cold, and a faint whispering sound fills the room.</p>
+        <p>The wooden floorboards creak as you step further into the room. You can try to move quietly or ignore the sound.</p>
+        </div>
+
+        <div class = "equipment">
+        <div class="card" style="width: 18rem;">
+            <a href="livingroom2.html" onclick="pickQuiet(1)">
+            <img src="quiet.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Move Quietly</h5>
+            </a>
+            </div>
+            </div>
+
+          <div class="card" style="width: 18rem;">
+            <a href="livingroom2.html" onclick="pickQuiet(0)">
+            <img src="idc.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Ignore it</h5>
+            </a>
+            </div>
+            </div>
+
+    </body>
+</html>
