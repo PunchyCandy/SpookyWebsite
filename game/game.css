@@ -8,8 +8,6 @@ body{
     margin: 10px;
 }
 
-<<<<<<< HEAD
-=======
 body {
     margin: 0;
 }
@@ -53,7 +51,6 @@ body {
     background-color: rgb(255, 106, 0);
 }
 
->>>>>>> 402b3f2863b6df0ce2d92aaf5dc63dcc06c05f50
 .card-body {
     display: flex !important;
     flex-direction: column;
@@ -71,7 +68,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
-<<<<<<< HEAD
 
 .textbox {
     color: orange;
@@ -81,6 +77,4 @@ body {
 img {
     width: 50%;
 }
-=======
 
->>>>>>> 402b3f2863b6df0ce2d92aaf5dc63dcc06c05f50
